@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material-ui.module';
 import { FeedComponent } from './paginas/feed/feed.component';
 import { ContainerComponent } from './paginas/container/container.component';
-import { HistoriesComponent } from './componentes/histories/histories.component';
+import { StoriesComponent } from './componentes/stories/stories.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { HistoriesComponent } from './componentes/histories/histories.component'
     ToolbarComponent,
     FeedComponent,
     ContainerComponent,
-    HistoriesComponent
+    StoriesComponent
   ],
   imports: [
     BrowserModule,
