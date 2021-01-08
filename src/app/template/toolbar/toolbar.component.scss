@@ -1,0 +1,52 @@
+.toolbar {
+  height: 50px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #DBDBDB;
+
+  // Container dos itens da toolbar
+  .elementos-toolbar {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+
+    // Logo instagram
+    .logo-instagram,
+    .input-pesquisa,
+    .acoes {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      width: 15%;
+
+      img {
+        height: 70%;
+      }
+    }
+
+    // Campo de pesquisa
+    .input-pesquisa {
+      input {
+        height: 60%;
+        outline: none;
+        border: 1px solid #DBDBDB;
+        border-radius: 3px;
+      }
+    }
+
+    // Botoes de ação
+    .acoes {
+      ul {
+        display: flex;
+
+        li {
+          margin-right: 10px;
+          list-style: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
