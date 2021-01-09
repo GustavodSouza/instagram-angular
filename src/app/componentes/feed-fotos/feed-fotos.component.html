@@ -1,0 +1,13 @@
+<div class="feed-fotos">
+  <div class="cabecalho">
+    <div class="avatar">
+      <app-avatar peso="40" largura="40" [dados]="dados"></app-avatar>
+    </div>
+    <div class="user">
+      <span>{{ dados.user }}</span>
+    </div>
+  </div>
+  <div class="foto">
+    <img [src]="'./assets/avatar/'+dados.img+'.jpg'" alt="">
+  </div>
+</div>

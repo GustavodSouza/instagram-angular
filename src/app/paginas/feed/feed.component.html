@@ -4,10 +4,10 @@
       <app-stories></app-stories>
     </div>
     <div class="feed-principal">
-      <h1>Fotos do feed</h1>
+      <app-feed-fotos *ngFor="let item of dadosUsuario" [dados]="item"></app-feed-fotos>
     </div>
   </div>
   <div class="menu-lateral-direito">
-    <h1>Menu lateral</h1>
+    <app-menu-lateral-direito></app-menu-lateral-direito>
   </div>
 </div>

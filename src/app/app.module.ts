@@ -11,6 +11,8 @@ import { ContainerComponent } from './paginas/container/container.component';
 import { StoriesComponent } from './componentes/stories/stories.component';
 import { AvatarComponent } from './componentes/avatar/avatar.component';
 import { SetasComponent } from './componentes/setas/setas.component';
+import { MenuLateralDireitoComponent } from './componentes/menu-lateral-direito/menu-lateral-direito.component';
+import { FeedFotosComponent } from './componentes/feed-fotos/feed-fotos.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { SetasComponent } from './componentes/setas/setas.component';
     StoriesComponent,
     AvatarComponent,
     SetasComponent,
+    MenuLateralDireitoComponent,
+    FeedFotosComponent,
   ],
   imports: [
     BrowserModule,

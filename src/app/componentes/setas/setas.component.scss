@@ -1,6 +1,5 @@
 .setas {
   cursor: pointer;
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,8 +7,4 @@
   border-radius: 20px;
   width: 30px;
   height: 30px;
-
-  material-icons {
-    color: transparent;
-  }
 }

@@ -4,7 +4,10 @@
       <app-setas lado="retorna" [(indexAtual)]="indexAtual" [(tamanho)]="dadosUsuario.length" (evento)="acao($event)">
       </app-setas>
     </div>
-    <app-avatar *ngFor="let item of dadosUsuario | slice:this.indexAtual:this.cortar()" [dados]="item"></app-avatar>
+    <div class="div-avatar">
+      <app-avatar *ngFor="let item of dadosUsuario | slice:this.indexAtual:this.cortar()" [dados]="item"
+        [mostrarNome]="true" peso="70" largura="70"></app-avatar>
+    </div>
     <div class="seta-avanca" *ngIf="corte !== dadosUsuario.length">
       <app-setas lado="avanca" [(indexAtual)]="indexAtual" [(tamanho)]="dadosUsuario.length" [(corte)]="corte"
         (evento)="acao($event)">

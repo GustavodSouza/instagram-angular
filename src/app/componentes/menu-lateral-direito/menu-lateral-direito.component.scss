@@ -1,0 +1,38 @@
+.menu-lateral-direito {
+  position: fixed;
+  width: 25%;
+
+  .avatar {
+    display: flex;
+    align-items: center;
+
+    .nomes {
+      display: flex;
+      flex-direction: column;
+
+      .user {
+        font-weight: bold;
+      }
+
+      .nome-usuario {
+        color: #B3B3B3;
+      }
+    }
+  }
+
+  .div-sugestao {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+    width: 100%;
+
+    .sugestao {
+      color: #8E8E8E;
+      font-weight: 500;
+    }
+
+    .ver-tudo {
+      cursor: pointer;
+    }
+  }
+}

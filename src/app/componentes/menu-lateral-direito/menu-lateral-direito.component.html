@@ -1,0 +1,17 @@
+<div class="menu-lateral-direito">
+  <div class="avatar">
+    <div>
+      <app-avatar peso="70" largura="70" [dados]="usuarioLogado" [mostrarNome]="false"></app-avatar>
+    </div>
+    <div class="nomes">
+      <span class="user">{{ usuarioLogado.user }}</span>
+      <span class="nome-usuario">{{ usuarioLogado.nome }}</span>
+    </div>
+  </div>
+
+  <div class="div-sugestao">
+    <span class="sugestao">Sugestão para você</span>
+    <span class="ver-tudo">Ver tudo</span>
+  </div>
+
+</div>
