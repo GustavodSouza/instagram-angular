@@ -9,6 +9,8 @@ import { MaterialModule } from './material-ui.module';
 import { FeedComponent } from './paginas/feed/feed.component';
 import { ContainerComponent } from './paginas/container/container.component';
 import { StoriesComponent } from './componentes/stories/stories.component';
+import { AvatarComponent } from './componentes/avatar/avatar.component';
+import { SetasComponent } from './componentes/setas/setas.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { StoriesComponent } from './componentes/stories/stories.component';
     ToolbarComponent,
     FeedComponent,
     ContainerComponent,
-    StoriesComponent
+    StoriesComponent,
+    AvatarComponent,
+    SetasComponent,
   ],
   imports: [
     BrowserModule,

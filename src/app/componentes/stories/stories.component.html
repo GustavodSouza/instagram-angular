@@ -1,3 +1,14 @@
 <div class="histories">
-  <mat-icon mat-card-avatar></mat-icon>
+  <div class="avatar">
+    <div class="seta-retorna" *ngIf="indexAtual !== 0">
+      <app-setas lado="retorna" [(indexAtual)]="indexAtual" [(tamanho)]="dadosUsuario.length" (evento)="acao($event)">
+      </app-setas>
+    </div>
+    <app-avatar *ngFor="let item of dadosUsuario | slice:this.indexAtual:this.cortar()" [dados]="item"></app-avatar>
+    <div class="seta-avanca" *ngIf="corte !== dadosUsuario.length">
+      <app-setas lado="avanca" [(indexAtual)]="indexAtual" [(tamanho)]="dadosUsuario.length" [(corte)]="corte"
+        (evento)="acao($event)">
+      </app-setas>
+    </div>
+  </div>
 </div>

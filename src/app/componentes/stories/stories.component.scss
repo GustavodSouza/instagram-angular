@@ -1,3 +1,16 @@
 .histories {
-  height: 30px;
+  height: 100px;
+  border: 1px solid red;
+
+  .avatar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border: 1px solid green;
+  }
+}
+
+.seta-avanca,
+.seta-retorna {
+  margin-bottom: 20px;
 }
