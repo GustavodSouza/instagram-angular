@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 export class StoriesComponent implements OnInit {
 
   public indexAtual = 0;
-  public corte = 5;
+  public corte = 6;
 
   public dadosUsuario = [
     {

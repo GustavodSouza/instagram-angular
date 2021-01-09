@@ -17,3 +17,15 @@
     margin-bottom: 10px;
   }
 }
+
+.nome-avatar {
+  width: 80px;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    font-size: 15px;
+  }
+}

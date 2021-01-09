@@ -13,6 +13,7 @@ import { AvatarComponent } from './componentes/avatar/avatar.component';
 import { SetasComponent } from './componentes/setas/setas.component';
 import { MenuLateralDireitoComponent } from './componentes/menu-lateral-direito/menu-lateral-direito.component';
 import { FeedFotosComponent } from './componentes/feed-fotos/feed-fotos.component';
+import { SugestaoComponent } from './paginas/sugestao/sugestao.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FeedFotosComponent } from './componentes/feed-fotos/feed-fotos.componen
     SetasComponent,
     MenuLateralDireitoComponent,
     FeedFotosComponent,
+    SugestaoComponent,
   ],
   imports: [
     BrowserModule,

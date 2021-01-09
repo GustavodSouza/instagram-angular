@@ -6,7 +6,7 @@
     </div>
     <div class="div-avatar">
       <app-avatar *ngFor="let item of dadosUsuario | slice:this.indexAtual:this.cortar()" [dados]="item"
-        [mostrarNome]="true" peso="70" largura="70"></app-avatar>
+        [mostrarNome]="true" peso="60" largura="60"></app-avatar>
     </div>
     <div class="seta-avanca" *ngIf="corte !== dadosUsuario.length">
       <app-setas lado="avanca" [(indexAtual)]="indexAtual" [(tamanho)]="dadosUsuario.length" [(corte)]="corte"

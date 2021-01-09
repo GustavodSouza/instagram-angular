@@ -12,19 +12,19 @@ export class FeedComponent implements OnInit {
       id: 1,
       nome: 'Usuario 1',
       img: 'foto1',
-      user: 'PaulaoDaBorracharia123',
+      user: 'usuario123',
     },
     {
       id: 2,
       nome: 'Usuario 2',
       img: 'foto2',
-      user: 'Tonhodalua',
+      user: 'usuario345',
     },
     {
       id: 3,
       nome: 'Usuario 3',
       img: 'foto3',
-      user: 'ZéBonitim',
+      user: 'usuario567',
     },
   ];
 

@@ -1,4 +1,6 @@
 <div class="avatar" [style.width]="largura + 'px'" [style.height]="peso + 'px'" (click)="abrirStories()">
   <img [src]="'./assets/avatar/'+dados.img+'.jpg'" alt="avatar" />
-  <span *ngIf="mostrarNome">{{ dados.nome }}</span>
+  <div class="nome-avatar">
+    <span *ngIf="mostrarNome">{{ dados.nome }}</span>
+  </div>
 </div>
