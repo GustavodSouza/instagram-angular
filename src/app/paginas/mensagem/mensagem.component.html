@@ -1,0 +1,89 @@
+<div class="mensagem">
+
+  <div class="coluna-esquerda">
+    <div class="cabecalho">
+      <div class="user">
+        <span>_gustavodsouza</span>
+        <fa-icon class="icone-seta" [icon]="faArrow"></fa-icon>
+      </div>
+      <div class="editar">
+        <fa-icon [icon]="faEdit"></fa-icon>
+      </div>
+    </div>
+
+    <div class="mensagem-amigos">
+      <mat-selection-list #shoes>
+        <mat-list-option (click)="selecionar(item.id)" *ngFor="let item of dadosUsuario" [value]="item">
+          <div class="avatar">
+            <app-avatar [dados]="item" largura="50" peso="50" [mostrarNome]="false">
+            </app-avatar>
+            <div class="user-online">
+              <div class="nome-usuario">
+                <span>{{ item.user }}</span>
+              </div>
+              <div>
+                <span>Online agora</span>
+              </div>
+            </div>
+          </div>
+        </mat-list-option>
+      </mat-selection-list>
+    </div>
+  </div>
+
+  <div class="coluna-direita">
+    <div *ngIf="!carregarMensagem; else mensagem" class="container-inicial">
+      <div class="icone-mensagem">
+        <img src="./assets/icones/paper-plane-regular.svg" alt="">
+      </div>
+      <div class="texto">
+        <div class="div-suas-mensagens">
+          <span class="suas-mensagens">Suas mensagens</span>
+        </div>
+        <div class="div-desricao">
+          <span class="descricao">Envie fotos e mensagens privadas para um amigo ou grupo.</span>
+        </div>
+        <div>
+          <button mat-button color="primary">Primary</button>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #mensagem>
+      <div class="cabecalho-mensagem">
+        <div class="avatar-user">
+          <div class="avatar">
+            <app-avatar [dados]="verificarUsuario()" largura="30" peso="30" [mostrarNome]="false"></app-avatar>
+          </div>
+          <div class="user">
+            <div>
+              <span>{{ verificarUsuario().user }}</span>
+            </div>
+            <div>
+              <span>Online agora</span>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="user">
+          <span>_gustavodsouza</span>
+          <fa-icon class="icone-seta" [icon]="faArrow"></fa-icon>
+        </div>
+        <div class="editar">
+          <fa-icon [icon]="faEdit"></fa-icon>
+        </div> -->
+      </div>
+      <div class="container">
+        <div class="container-mensagem">
+          <span>{{verificarMensagem().mensagem}}</span>
+        </div>
+        <div class="input-mensagem">
+          <mat-form-field appearance="outline">
+            <input placeholder="Mensagem..." matInput>
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </div>
+      </div>
+    </ng-template>
+
+  </div>
+</div>

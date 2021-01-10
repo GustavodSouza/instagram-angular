@@ -1,0 +1,149 @@
+.mensagem {
+  display: flex;
+  border: 1px solid #DBDBDB;
+  border-radius: 5px;
+
+  .coluna-esquerda {
+    width: 40%;
+    border: 1px solid #DBDBDB;
+    .cabecalho {
+      display: flex;
+      width: 100%;
+      height: 50px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #DBDBDB;
+      background-color: #FFFFFF;
+
+      .user {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        span {
+          font-size: 18px;
+          margin-right: 10px;
+        }
+
+        .icone-seta {
+          cursor: pointer;
+        }
+      }
+
+      .editar {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 40%;
+        height: 100%;
+        padding-right: 10px;
+        cursor: pointer;
+      }
+    }
+
+    .mensagem-amigos {
+      overflow: auto;
+      height: 70vh;
+      background-color: #FFFFFF;
+
+      .avatar {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .coluna-direita {
+    width: 100%;
+    background-color: #FFFFFF;
+
+    .container-inicial {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border: 1px solid red;
+
+      .icone-mensagem {
+        border: 2px solid black;
+        padding: 30px;
+        border-radius: 350px;
+        width: 5%;
+        height: 8%;
+        margin-bottom: 20px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .texto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .div-suas-mensagens {
+          margin-bottom: 15px;
+          .suas-mensagens {
+            font-size: 20px;
+          }
+        }
+
+        .div-desricao {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    .cabecalho-mensagem {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 50px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #DBDBDB;
+      background-color: #FFFFFF;
+
+      .avatar-user {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+
+        .user {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    .container {
+      .container-mensagem {
+        border: 1px solid red;
+        height: 300px;
+      }
+
+      .input-mensagem {
+        border: 1px solid red;
+
+        mat-form-field {
+          width: 100%;
+          height: 80%;
+        }
+      }
+    }
+  }
+
+  mat-list-option {
+    width: 100% !important;
+    height: 80% !important;
+  }
+
+  ::ng-deep mat-pseudo-checkbox {
+    display: none !important;
+  }
+}

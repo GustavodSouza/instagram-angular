@@ -1,6 +1,6 @@
 <div class="toolbar">
   <div class="elementos-toolbar">
-    <div class="logo-instagram">
+    <div class="logo-instagram" [routerLink]="['']">
       <img src="./assets/logos/instagram.png" alt="logo" />
     </div>
     <div class="input-pesquisa">
@@ -8,11 +8,9 @@
     </div>
     <div class="acoes">
       <ul>
-        <li>Home</li>
-        <li>Direct</li>
-        <li>Explore</li>
-        <li>Heart</li>
-        <li>Profile</li>
+        <li *ngFor="let item of itensToolbar" [routerLink]="[item.rota]">
+          <img [src]="'./assets/icones/'+ verificarIcone(item) + '.svg'" alt="icone" />
+        </li>
       </ul>
     </div>
   </div>
