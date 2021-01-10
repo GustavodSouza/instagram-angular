@@ -7,16 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuLateralDireitoComponent implements OnInit {
 
-  public usuarioLogado = {
-    id: 1,
-    nome: 'Gustavo',
-    img: 'foto1',
-    user: '_gustadodsouza',
-  };
+  public usuarioLogado;
 
   constructor() { }
 
-  ngOnInit() {
+  public ngOnInit(): void {
+    this.usuarioLogado = JSON.parse(sessionStorage.getItem('USUARIO_LOGADO'));
   }
-
 }

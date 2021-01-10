@@ -1,5 +1,8 @@
 .histories {
   background-color: #FFFFFF;
+  position: relative;
+  max-width: 100%;
+
   .avatar {
     display: flex;
     align-items: center;
@@ -13,9 +16,19 @@
       margin: 0 0 20px 0;
     }
   }
+
+  .seta-avanca {
+    position: relative;
+    right: 40px;
+  }
+
+  .seta-retorna {
+    position: relative;
+    left: 10px;
+  }
 }
 
 .seta-avanca,
 .seta-retorna {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }

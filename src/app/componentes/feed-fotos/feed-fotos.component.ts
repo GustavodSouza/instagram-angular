@@ -12,6 +12,7 @@ export class FeedFotosComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
