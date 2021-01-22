@@ -12,7 +12,7 @@
     </div>
 
     <div class="mensagem-amigos">
-      <mat-selection-list #shoes>
+      <mat-selection-list>
         <mat-list-option (click)="selecionar(item.id)" *ngFor="let item of dadosUsuario" [value]="item">
           <div class="avatar">
             <app-avatar [dados]="item" largura="50" peso="50" [mostrarNome]="false">

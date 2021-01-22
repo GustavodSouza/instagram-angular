@@ -1,4 +1,6 @@
+import { StoriesAbertoComponent } from './../popup/stories-aberto/stories-aberto.component';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material';
 @Component({
   selector: 'app-stories',
   templateUrl: './stories.component.html',
@@ -10,7 +12,9 @@ export class StoriesComponent implements OnInit {
   public corte = 6;
   public dadosUsuario;
 
-  constructor() { }
+  constructor(
+    private popup: MatDialog,
+  ) { }
 
   public ngOnInit(): void {
     this.dadosUsuario = JSON.parse(sessionStorage.getItem('USUARIOS'));
@@ -38,5 +42,12 @@ export class StoriesComponent implements OnInit {
       return;
     }
     return this.corte;
+  }
+
+  public abrirStories(): void {
+    this.popup.open(StoriesAbertoComponent, {
+      width: '30vw',
+      height: '95vh',
+    });
   }
 }

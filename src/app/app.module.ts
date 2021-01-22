@@ -17,6 +17,8 @@ import { MaterialModule } from './modules/material-ui.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MensagemComponent } from './paginas/mensagem/mensagem.component';
 import { FormsModule } from '@angular/forms';
+import { StoriesAbertoComponent } from './componentes/popup/stories-aberto/stories-aberto.component';
+import { BarraProgressoComponent } from './componentes/barra-progresso/barra-progresso.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,11 @@ import { FormsModule } from '@angular/forms';
     FeedFotosComponent,
     SugestaoComponent,
     MensagemComponent,
+    StoriesAbertoComponent,
+    BarraProgressoComponent,
+  ],
+  entryComponents: [
+    StoriesAbertoComponent,
   ],
   imports: [
     BrowserModule,

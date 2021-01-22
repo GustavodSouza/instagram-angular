@@ -1,0 +1,17 @@
+<div class="stories-aberto">
+  <!-- <div class="icone-fechar" (click)="popupRef.close()">
+    <fa-icon [icon]="faTimes"></fa-icon>
+  </div> -->
+  <div class="seta-esquerda">
+    <app-setas lado="retorna"></app-setas>
+  </div>
+  <div class="conteudo">
+    <div class="contador">
+      <app-barra-progresso [(imagens)]="imgs" [(valor)]="value"></app-barra-progresso>
+    </div>
+    <img [src]="'./assets/imagens/'+imgs[posicaoImg]+'.jpg'" alt="" />
+  </div>
+  <div class="seta-direita">
+    <app-setas lado="avanca"></app-setas>
+  </div>
+</div>

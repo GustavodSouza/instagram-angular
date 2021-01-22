@@ -44,8 +44,13 @@
 
     // Botoes de ação
     .acoes {
+      display: flex;
+      align-items: center;
+      position: relative;
+
       ul {
         display: flex;
+        align-items: center;
 
         li {
           margin-right: 10px;
@@ -62,3 +67,31 @@
     }
   }
 }
+
+.menu-perfil {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 2vw;
+  top: 50px;
+  border-radius: 5px;
+  box-shadow: 1px 6px 18px -1px rgba(0,0,0,0.5);
+  padding: 5px;
+
+  // .itens {
+  //   padding: 10px;
+  //   cursor: pointer;
+  // }
+}
+
+// mat-list-option {
+//     width: 100% !important;
+//     height: 80% !important;
+//   }
+
+  ::ng-deep mat-pseudo-checkbox {
+    display: none !important;
+  }

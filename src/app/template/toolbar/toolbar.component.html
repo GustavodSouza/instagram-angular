@@ -12,6 +12,20 @@
           <img [src]="'./assets/icones/'+ verificarIcone(item) + '.svg'" alt="icone" />
         </li>
       </ul>
+      <app-avatar (evento)="menuAberto = !menuAberto" peso="20" largura="20" [mostrarNome]="false"
+        [dados]="usuarioLogado" [borda]="menuAberto ? 'selecionado' : ''">
+      </app-avatar>
+      <div *ngIf="menuAberto" class="menu-perfil">
+        <mat-selection-list>
+          <mat-list-option *ngFor="let item of menuPerfil; let ultimo = last;">
+            <span *ngIf="!ultimo; else ultimoElemento;">{{ item.nome }}</span>
+            <ng-template #ultimoElemento>
+              <div style="border-bottom: 1px solid red;"></div>
+              <span>{{ item.nome }}</span>
+            </ng-template>
+          </mat-list-option>
+        </mat-selection-list>
+      </div>
     </div>
   </div>
 </div>

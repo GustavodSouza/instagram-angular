@@ -1,5 +1,6 @@
 import { Route } from '@angular/compiler/src/core';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { MatTooltip } from '@angular/material';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-toolbar',
@@ -8,6 +9,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ToolbarComponent implements OnInit {
 
+  @ViewChild(MatTooltip, { static: false }) public tooltip: MatTooltip;
+
+  public menuAberto = false;
+  public usuarioLogado;
   public itensToolbar = [
     {
       id: 1,
@@ -36,18 +41,50 @@ export class ToolbarComponent implements OnInit {
       rota: '/curtidas',
       iconeInativo: 'heart-regular',
       iconeAtivo: 'heart-solid',
-    }
-  ]
+    },
+  ];
+  public menuPerfil = [
+    {
+      id: 1,
+      nome: 'Perfil',
+      rota: '',
+    },
+    {
+      id: 2,
+      nome: 'Salvos',
+      rota: '',
+    },
+    {
+      id: 3,
+      nome: 'Configurações',
+      rota: '',
+    },
+    {
+      id: 4,
+      nome: 'Trocar de conta',
+      rota: '',
+    },
+    {
+      id: 5,
+      nome: 'Sair',
+      rota: '',
+    },
+  ];
 
   constructor(
     private router: Router,
   ) { }
 
   ngOnInit() {
+    this.usuarioLogado = JSON.parse(sessionStorage.getItem('USUARIO_LOGADO'));
   }
 
   // Verifica se a rota atual bate com a rota do item
   public verificarIcone(item): any {
     return this.router.url === item.rota ? item.iconeAtivo : item.iconeInativo;
+  }
+
+  public estadoMenu(): string {
+    return this.menuAberto ? 'inline' : 'none';
   }
 }

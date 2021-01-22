@@ -1,0 +1,46 @@
+.stories-aberto {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  // .icone-fechar {
+  //   position: absolute;
+  //   display: flex;
+  //   justify-content: flex-end;
+  //   width: 60%;
+
+  //   fa-icon {
+  //     font-size: 30px;
+  //     cursor: pointer;
+  //   }
+  // }
+
+  .seta-direita {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+    top: 45%;
+  }
+
+  .seta-esquerda {
+    position: absolute;
+    width: 30%;
+    margin-left: -70px;
+    top: 45%;
+  }
+
+  .conteudo {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .contador {
+      display: flex;
+      border: 1px solid red;
+      height: 10px;
+    }
+  }
+}
